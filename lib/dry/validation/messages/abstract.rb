@@ -56,6 +56,7 @@ module Dry
 
         def rule(name, options = {})
           path = "%{locale}.rules.#{name}"
+          path = path % options if options[:locale]
           get(path, options) if key?(path, options)
         end
 
