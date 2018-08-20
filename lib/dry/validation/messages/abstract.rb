@@ -55,7 +55,7 @@ module Dry
         end
 
         def rule(name, options = {})
-          path = "%{locale}.rules.#{name}"
+          path = "rules.#{name}"
           get(path, options) if key?(path, options)
         end
 
